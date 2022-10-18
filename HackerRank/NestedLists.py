@@ -1,12 +1,30 @@
 if __name__ == '__main__':
-    a = []
+    arr = []
     for _ in range(int(input())):
-        a.append([input(), float(input())])
+        name = input()
+        score = float(input())
+        arr.append([name, score])
         
-    a.sort(key = lambda x: x[1])
-    subl = [i for i in a if i[1] != a[0][1]]
-    subl2 = [i for i in subl if i[1] == subl[0][1]]
-    subl2.sort()
+    sub_arr = []   
+    for i in range(len(arr)):
+        if arr[i][1] not in sub_arr:
+            sub_arr.append(arr[i][1])
     
-    for i in subl2:
-        print(i[0])
+    sub_arr.sort()        
+    # for i in range(len(sub_arr)-1):
+    #     if sub_arr[i]>sub_arr[i+1]:
+    #         temp = sub_arr[i]
+    #         sub_arr[i+1] = sub_arr[i]
+    #         sub_arr[i] = temp
+    
+    num = sub_arr[1]
+    
+    final_list = []
+    for i in range(len(arr)):
+        if arr[i][1] == num:
+            final_list.append(arr[i][0])
+            
+    final_list.sort()
+    for i in final_list:
+        print(i)        
+            
