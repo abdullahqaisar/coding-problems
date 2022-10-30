@@ -11,36 +11,53 @@ class Showroom:
 class Vehicle:
     vehicle_name = ""
     milage = ""
-    companyName = ""
+    company_name = ""
     model = ""
     price = ""
+    horse_power = ""
     
-    def __init(self, vn, m, cn, mod, p):
-        vehicle_name = vn
-        milage = m
-        companyName = cn
-        model = mod
-        price = p
-    
-    
-    pass
+    def __init__(self, vn, m, cn, mod, p, hp):
+        self.vehicle_name = vn
+        self.milage = m
+        self.companyName = cn
+        self.model = mod
+        self.price = p
+        self.horse_power = hp
 
-class Big_Vehicle:
-    pass
+    def getVehicleName(self):
+        print("Vehicle Name is vn" + self.vehicle_name)
 
-class Small_Vehicle:
     pass
 
 class Bike:
+    isKickOrAuto = False
+    hasExtraCarrier = False
+    saddleHeight = float
+
+    def __init__(self, ka, ec, sh):
+        self.isKickOrAuto = ka
+        self.hasExtraCarrier = ec,
+        self.saddleHeight = sh
     pass
 
 class Car:
+    stearingWheelSide = False ## False for left, True for Right
+    soundSystemCompany = ""
+    numberOfDoors = 0
+
+    def __init__(self, sws, ssc, noD):
+        self.stearingWheelSide = sws
+        self.soundSystemCompany = ssc
+        self.numberOfDoors = noD
     pass
 
 class Bus:
     pass
 
 class Truck:
+    roof_height = ""
+
+    spare_tires = 0
     pass
 
 class Address:
@@ -54,3 +71,5 @@ class Teachers:
 
 if __name__ == "__main__":
     print("Welcome to School Management System")
+    v1  = Vehicle("1", "2","3", "4","5") 
+    v1.getVehicleName()
