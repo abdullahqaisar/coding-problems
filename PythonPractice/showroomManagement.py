@@ -64,14 +64,29 @@ class Account:
 
 
 def menu():
+    choice = 20
     print("Welcome to SHOWROOM")
     print("1. Login")
     print("2. Create Account")
-    print("Press 1 for Buying")
-    print("Press 2 for Adding Vehicle")
+    print("4. Admin Login")
+    print("0. Exit")
+    print("")
+    choice = input("Your Choice: ")
+
+    if (choice == 1):
+        login()
+    # print("Press 1 for Buying Vehicle")
+    # print("Press 2 for Adding Vehicle")
+
+def login():
+    print("             LOGIN")
+    username = input("Username: ")
+    password = input("Password: ")
 
 
 if __name__ == "__main__":
+    menu()
     
-    v1  = Vehicle("1", "2","3", "4","5", "6") 
-    v1.getVehicleName()
+
+    # v1  = Vehicle("1", "2","3", "4","5", "6") 
+    # v1.getVehicleName()
