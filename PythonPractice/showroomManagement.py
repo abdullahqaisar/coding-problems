@@ -1,13 +1,5 @@
 ##A vehicle showroom management system project!
 
-class Showroom:
-    showroom_name = ""
-    showroom_address = ""
-
-    def __init__():
-        pass
-    pass
-
 class Vehicle:
     vehicle_name = ""
     milage = ""
@@ -52,24 +44,34 @@ class Car:
     pass
 
 class Bus:
+    hasEmergencyExit = ""
+    isBuisnessClass = False
+    noOfSeats = 0
     pass
 
 class Truck:
     roof_height = ""
-
     spare_tires = 0
     pass
 
-class Address:
-    pass
-
 class Account:
+    name = ""
+    username = ""
+    password = ""
+    age = ""
+    email = ""
     pass
 
-class Teachers:
-    pass
+
+def menu():
+    print("Welcome to SHOWROOM")
+    print("1. Login")
+    print("2. Create Account")
+    print("Press 1 for Buying")
+    print("Press 2 for Adding Vehicle")
+
 
 if __name__ == "__main__":
-    print("Welcome to School Management System")
+    
     v1  = Vehicle("1", "2","3", "4","5", "6") 
     v1.getVehicleName()
