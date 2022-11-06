@@ -1,13 +1,6 @@
-##A vehicle showroom management system project!
+# A vehicle showroom management system project!
 
 class Vehicle:
-    vehicle_name = ""
-    milage = ""
-    company_name = ""
-    model = ""
-    price = ""
-    horse_power = ""
-    
     def __init__(self, vn, m, cn, mod, p, hp):
         self.vehicle_name = vn
         self.milage = m
@@ -16,32 +9,31 @@ class Vehicle:
         self.price = p
         self.horse_power = hp
 
-    def getVehicleName(self):
-        print("Vehicle Name is vn" + self.vehicle_name)
+    @property
+    def vehicle_name(self):
+        return self.vehicle_name
 
+    @vehicle_name.setter
+    def vehicle_name(self, vehicle_name):
+        self.vehicle_name = vehicle_name
     pass
 
-class Bike:
-    isKickOrAuto = False
-    hasExtraCarrier = False
-    saddleHeight = float
 
+class Bike:
     def __init__(self, ka, ec, sh):
         self.isKickOrAuto = ka
         self.hasExtraCarrier = ec,
         self.saddleHeight = sh
     pass
 
-class Car:
-    stearingWheelSide = False ## False for left, True for Right
-    soundSystemCompany = ""
-    numberOfDoors = 0
 
+class Car:
     def __init__(self, sws, ssc, noD):
-        self.stearingWheelSide = sws
+        self.stearingWheelSide = sws   # False for left, True for Right
         self.soundSystemCompany = ssc
         self.numberOfDoors = noD
     pass
+
 
 class Bus:
     hasEmergencyExit = ""
@@ -49,10 +41,12 @@ class Bus:
     noOfSeats = 0
     pass
 
+
 class Truck:
     roof_height = ""
     spare_tires = 0
     pass
+
 
 class Account:
     name = ""
@@ -78,6 +72,7 @@ def menu():
     # print("Press 1 for Buying Vehicle")
     # print("Press 2 for Adding Vehicle")
 
+
 def login():
     print("             LOGIN")
     username = input("Username: ")
@@ -86,7 +81,6 @@ def login():
 
 if __name__ == "__main__":
     menu()
-    
 
-    # v1  = Vehicle("1", "2","3", "4","5", "6") 
+    # v1  = Vehicle("1", "2","3", "4","5", "6")
     # v1.getVehicleName()
